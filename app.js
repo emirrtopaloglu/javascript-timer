@@ -19,6 +19,8 @@ var ssecond = 0;
 var mfirst = 0;
 var msecond = 0;
 
+var Count;
+
 // Functions
 
 function Timer() {
@@ -50,7 +52,9 @@ function Print() {
 }
 
 start.addEventListener("click", () => {
-    const Count = setInterval(Timer, 1000);
+    if ( Count == null ) {
+        Count = setInterval(Timer, 1000);
+    }
 
     stop.addEventListener("click", () => {
         clearInterval(Count);
