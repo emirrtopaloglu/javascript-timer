@@ -58,10 +58,12 @@ start.addEventListener("click", () => {
 
     stop.addEventListener("click", () => {
         clearInterval(Count);
+        Count = null;
     })
 
     reset.addEventListener("click", () => {
         clearInterval(Count);
+        Count = null;
         sfirst = 0;
         ssecond = 0;
         mfirst = 0;
